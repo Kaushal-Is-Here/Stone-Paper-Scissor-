@@ -4,7 +4,7 @@ from random import randint
 
 # main window
 root = Tk()
-root.title("Rock Scissor Paper")
+root.title("Stone Scissor Paper")
 root.configure(background="#9b59b6")
 
 # picture
@@ -67,7 +67,7 @@ def updateCompScore():
 def checkWin(player, computer):
     if player == computer:
         updateMessage("Its a tie!!!")
-    elif player == "rock":
+    elif player == "Stone":
         if computer == "paper":
             updateMessage("You loose")
             updateCompScore()
@@ -95,34 +95,34 @@ def checkWin(player, computer):
 
 # update choices
 
-choices = ["rock", "paper", "scissor"]
+choices = ["Stone", "paper", "scissor"]
 
 
 def updateChoice(x):
 
     # for computer
     compChoice = choices[randint(0, 2)]
-    if compChoice == "rock":
-        comp_label.configure(image=rock_img_comp)
+    if compChoice == "Stone":
+        comp_label.configure(image=)
     elif compChoice == "paper":
-        comp_label.configure(image=paper_img_comp)
+        comp_label.configure(image=)
     else:
-        comp_label.configure(image=scissor_img_comp)
+        comp_label.configure(image=)
 
 
 # for user
     if x == "rock":
-        user_label.configure(image=rock_img)
+        user_label.configure(image=)
     elif x == "paper":
-        user_label.configure(image=paper_img)
+        user_label.configure(image=)
     else:
-        user_label.configure(image=scissor_img)
+        user_label.configure(image=)
 
     checkWin(x, compChoice)
 
 
 # buttons
-rock = Button(root, width=20, height=2, text="ROCK",
+Stone = Button(root, width=20, height=2, text="ROCK",
               bg="#FF3E4D", fg="white", command=lambda: updateChoice("rock")).grid(row=2, column=1)
 paper = Button(root, width=20, height=2, text="PAPER",
                bg="#FAD02E", fg="white", command=lambda: updateChoice("paper")).grid(row=2, column=2)
