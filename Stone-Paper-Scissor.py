@@ -16,8 +16,8 @@ paper_img_comp = ImageTk.PhotoImage(Image.open(".png"))
 scissor_img_comp = ImageTk.PhotoImage(Image.open(".png"))
 
 # insert picture
-user_label = Label(root, image=scissor_img, bg="#9b59b6")
-comp_label = Label(root, image=scissor_img_comp, bg="#9b59b6")
+user_label = Label(root, image=, bg="#9b59b6")
+comp_label = Label(root, image=, bg="#9b59b6")
 comp_label.grid(row=1, column=0)
 user_label.grid(row=1, column=4)
 
@@ -111,7 +111,7 @@ def updateChoice(x):
 
 
 # for user
-    if x == "rock":
+    if x == "Stone":
         user_label.configure(image=)
     elif x == "paper":
         user_label.configure(image=)
@@ -123,7 +123,7 @@ def updateChoice(x):
 
 # buttons
 Stone = Button(root, width=20, height=2, text="ROCK",
-              bg="#FF3E4D", fg="white", command=lambda: updateChoice("rock")).grid(row=2, column=1)
+              bg="#FF3E4D", fg="white", command=lambda: updateChoice("Stone")).grid(row=2, column=1)
 paper = Button(root, width=20, height=2, text="PAPER",
                bg="#FAD02E", fg="white", command=lambda: updateChoice("paper")).grid(row=2, column=2)
 scissor = Button(root, width=20, height=2, text="SCISSOR",
